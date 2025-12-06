@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data | Home</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <body>
+    <div class="container">
+      <div class="card" role="region" aria-label="Enter Data">
+        <h1>Data</h1>
+        <span class="subtitle">Enter data</span>
+  
+        <form id="form" method="post"  novalidate>
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Full name" required />
+          </div>
+  
+          <div class="row">
+            <div>
+              <label for="age">Age</label>
+              <input id="age" name="age" type="number" min="0" max="150" placeholder="Age" required />
+            </div>
+  
+            <div>
+              <label for="birthday">Birthday</label>
+              <input id="birthday" name="birthday" type="date" required />
+            </div>
+          </div>
+  
+          <div>
+            <label for="phone">Phone number</label>
+            <!-- enforces exactly 10 digits -->
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              inputmode="numeric"
+              pattern="[0-9]{10}"
+              maxlength="10"
+              placeholder="10-digit phone number"
+              title="Enter a 10-digit phone number (digits only)"
+              required
+            />
+          </div>
+  
+          <div>
+            <label for="tenDigit">10-digit number</label>
+            <!-- separate field that also requires exactly 10 digits -->
+            <input
+              id="tenDigit"
+              name="tenDigit"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]{10}"
+              maxlength="10"
+              placeholder="Exactly 10 digits"
+              title="Enter exactly 10 digits"
+              required
+            />
+          </div>
+  
+          <button type="submit">Submit</button>
+          <div class="small-note">All fields required. Phone and 10-digit number must be exactly 10 digits.</div>
+        </form>
+        <a href="DataShow.html">ALL DATA</a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
