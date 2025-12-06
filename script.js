@@ -6,7 +6,7 @@ loadBtn.addEventListener("click", async () => {
   try {
     const res = await fetch("https://backend-demo-c09t.onrender.com/api/all");
     const data = await res.json();
-    console.log("Data : "+data)
+
     if (!Array.isArray(data)) {
       container.innerHTML = "<p>Error loading data.</p>";
       return;
